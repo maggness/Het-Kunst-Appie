@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&family=Raleway:wght@100&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+main section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.kaartjeTim {
+    margin: 7% auto 0 auto;
+    width: 600px;
+    height: 360px;
+    background: #e7e7e7;
+    box-shadow: 10px 8px 16px -15px black;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+.kaartjeTimBackup1 {
+    width: 600px;
+    height: 360px;
+    background: #e7e7e7;
+    box-shadow: 10px 8px 16px -15px black;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    margin: 7%;
+    z-index: 10;
+    transform: rotate(2deg);
+}
+
+.kaartjeTimBackup2 {
+    width: 600px;
+    height: 360px;
+    background: #e7e7e7;
+    box-shadow: 10px 8px 16px -15px black;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    margin: 7%;
+    z-index: 10;
+    transform: rotate(-2deg);
+}
+.kaartjeTimBackup3 {
+    width: 600px;
+    height: 360px;
+    background: #e7e7e7;
+    box-shadow: 10px 8px 16px -15px black;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    margin: 7%;
+    z-index: 10;
+    transform: rotate(-5deg);
+}
+
+.kaartjeTim nav {
+    height: 100%;
+    width: 100%;
+}
+
+.kaartjeTim button {
+    border: none;
+    background: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.kaartjeTim nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.backgroundRed {
+    background: #ffb6b3;
+}
+
+.backgroundGreen {
+    background: #b3ffba;
+}
+
+.backgroundBlue {
+    background: #b3b3ff;
+}
+
+.backgroundPaars {
+    background: #f5b3ff;
+}
+
+.backgroundOranje {
+    background: #ffe6b3;
+}
+
+.backgroundYellow {
+    background: #fffcb3;
+}
+
+.InfoOverTim {
+    position: absolute;
+    top: 55%;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.streepRechtsBoven {
+    background: black;
+    width: 16%;
+    height: 2%;
+    position: absolute;
+    top: 3%;
+    right: -3%;
+    transform: rotate(45deg);
+    opacity: 0.1;
+}
+
+.streepRechtsOnder {
+    background: black;
+    width: 16%;
+    height: 2%;
+    position: absolute;
+    bottom: 3%;
+    right: -3%;
+    transform: rotate(-45deg);
+    opacity: 0.1;
+}
+
+.streepLinksBoven {
+    background: black;
+    width: 16%;
+    height: 2%;
+    position: absolute;
+    top: 3%;
+    left: -3%;
+    transform: rotate(-45deg);
+    opacity: 0.1;
+}
+
+.streepLinksOnder {
+    background: black;
+    width: 16%;
+    height: 2%;
+    position: absolute;
+    bottom: 3%;
+    left: -3%;
+    transform: rotate(45deg);
+    opacity: 0.1;
+}
