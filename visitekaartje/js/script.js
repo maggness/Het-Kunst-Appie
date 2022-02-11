@@ -10,6 +10,15 @@ let KaartjeSectionbackup3 = document.querySelector('#Kaartjebackup3');
 let TextVormNummer = 0;
 let textInOverMij = ['Hoi ik ben Tim!', 'Ik ben Grapic Designer & Developer', 'Bekijk mijn website: www.timderoller.nl', 'Email me: Timderoller@gmail.com' , 'Bel me: 0645490344', 'Beweeg me!'];
 let backgroundColor = ['Oranje', 'Red', 'Yellow', 'Green' , 'Blue', 'Paars'];
+let tijd = 0;
+
+// let downloadTimer = setInterval(function(){
+//   tijd += 1;
+//   console.log(tijd);
+
+//   textLetterI.style.transform = "scale("tijd")";
+
+// }, 1000);
 
 // getAndRenderData()
 
