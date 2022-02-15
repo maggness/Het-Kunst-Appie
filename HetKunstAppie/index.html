@@ -18,29 +18,22 @@
             <img src="images/zoeken.svg" alt="Zoek icon" id="zoeken" />
           </li>
         </ul>
-        <ul id="zoekenField">
-          <li>
-            <input
-              type="text"
-              class="searchTerm"
-              placeholder="What are you looking for?"
-            />
-          </li>
-          <li>je moeder</li>
-          <li>je vader</li>
-          <li>Zoekbalk</li>
-          <li>je moeder</li>
-          <li>je vader</li>
-          <li>Zoekbalk</li>
-          <li>je moeder</li>
-          <li>je vader</li>
-        </ul>
+        <input
+            id="searchInput"
+            type="text"
+            class="searchTerm"
+            placeholder="What are you looking for?"
+          />
+        <ul id="zoekenField"></ul>
       </nav>
     </header>
     <main>
-      <section id="items"></section>
+      <ul id="items" class="ArtContentContainer"></ul>
     </main>
-    <footer></footer>
+    <footer>
+      <button id="leftButton">links</button>
+      <button id="rightButton">rechts</button>
+    </footer>
   </body>
   <script src="js/script.js"></script>
 </html>

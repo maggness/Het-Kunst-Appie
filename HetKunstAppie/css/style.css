@@ -41,6 +41,15 @@ header nav {
   margin: 0;
 }
 
+header nav input {
+  width: 100%;
+  border: none;
+  height: 4vh;
+  position: fixed;
+  bottom: 10%;
+  z-index: 1000;
+}
+
 header nav ul:first-of-type {
   display: flex;
   width: 100%;
@@ -77,14 +86,19 @@ header nav ul:first-of-type li:last-of-type img {
 
 /* waarom komt deze niet bovenaan????? */
 header nav .uitklappen {
-    transform: rotate(-45deg) translateX(0%)!important;
-  }
+  transform: rotate(-45deg) translateX(0%) !important;
+}
 
 header nav ul:last-of-type {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, rgba(0,0,0,0.05646008403361347) 0%, rgba(0,0,0,0.8267682072829132) 4%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05646008403361347) 0%,
+    rgba(0, 0, 0, 0.8267682072829132) 4%,
+    rgba(0, 0, 0, 1) 100%
+  );
   list-style: none;
   padding: 15%;
   margin: 0;
@@ -92,27 +106,27 @@ header nav ul:last-of-type {
   left: 50%;
   transform: rotate(-45deg) translateX(100%);
   opacity: 0.9;
-  transition: .8s;
+  transition: 0.8s;
   overflow-y: scroll;
 }
 
 header nav ul:last-of-type input {
-    background: white;
-    border: none;
-    border-radius: 5px;
-    width: 80vw;
-    height: 3vh;
-    color: black;
-    outline: none;
-    transition: .5s;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  width: 80vw;
+  height: 3vh;
+  color: black;
+  outline: none;
+  transition: 0.5s;
 }
 
 header nav ul:last-of-type input:focus {
-    background: rgb(202, 202, 202);
-    transform: scale(1.03);
-    border: none;
-    color: black;
-    opacity: 1;
+  background: rgb(202, 202, 202);
+  transform: scale(1.03);
+  border: none;
+  color: black;
+  opacity: 1;
 }
 
 header nav ul:last-of-type li {
@@ -122,12 +136,13 @@ header nav ul:last-of-type li {
 }
 
 header nav ul li img {
-    width: 30%;
+  width: 30%;
 }
 
 .kunstStukSection {
-  width: 50%;
+  width: 100%;
   position: relative;
+  list-style: none;
 }
 
 .kunstStukSection img {
@@ -140,10 +155,68 @@ header nav ul li img {
   bottom: 0;
 }
 
-#items {
+.ArtContentContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
+  padding: 10% 0 0% 0%;
+}
+
+footer button {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  header nav ul:first-of-type {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2% 0 0% 0%;
+    z-index: 100;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  header nav ul:first-of-type li:last-of-type {
+    display: none;
+  }
+
+  header nav ul:first-of-type li img {
+    width: 50%;
+    padding-left: 3%;
+  }
+
+  .ArtContentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    align-content: center;
+  }
+
+  .kunstStukSection {
+    height: 100vh;
+    width: 35vw;
+    position: relative;
+    padding: 0 65vh;
+    transition: 2s;
+    transform: translateX(0vh);
+  }
+
+  .kunstStukSection img {
+    height: auto;
+    width: 35vw;
+  }
+
+  footer button {
+    display: block;
+  }
 }
