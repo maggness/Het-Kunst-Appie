@@ -15,3 +15,4 @@ function search() {
   searchInputSearchBar.addEventListener("keyup", function (e) {
     search();
   });
+  

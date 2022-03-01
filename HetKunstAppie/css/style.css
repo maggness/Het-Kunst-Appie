@@ -22,6 +22,27 @@ header {
   margin: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(211, 211, 211);
+}
+
 footer {
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -87,7 +108,7 @@ header nav ul:first-of-type li:last-of-type {
 
 header nav ul:first-of-type li img {
   width: 50%;
-  padding-left: 5%;
+  padding: 0 0 0 5%;
 }
 
 header nav ul:first-of-type li:last-of-type img {
@@ -144,17 +165,39 @@ header nav ul li img {
   width: 30%;
 }
 
-.kunstStukSection {
-  width: 100%;
+.loading {
+  list-style-type: none;
   position: relative;
-  list-style: none;
+  margin-bottom: 0.5vh;
 }
 
-.kunstStukSection img {
-  width: 100%;
+.loading div {
+  height: 35vh;
+  width: 100vw;
+    background: linear-gradient(270deg, #b4b4b488, #dfdfdf88);
+    background-size: 400% 400%;
+    -webkit-animation: loadingAnimation 2s ease infinite;
+    -moz-animation: loadingAnimation 2s ease infinite;
+    animation: loadingAnimation 2s ease infinite;
 }
 
-.kunstStukSection p {
+@-webkit-keyframes loadingAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes loadingAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes loadingAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.loading p {
   position: absolute;
   font-size: 0.8em;
   bottom: 0;
@@ -163,6 +206,70 @@ header nav ul li img {
   margin: 4%;
   border-radius: 3px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kunstStukSection {
+  width: 100%;
+  position: relative;
+  list-style: none;
+  transition: 0.5s;
+  animation: imageAppelpear 0.5s forwards;
+}
+
+@keyframes imageAppelpear {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.kunstStukSection h2 {
+  font-weight: 400;
+  position: absolute;
+  font-size: 0.8em;
+  bottom: 0;
+  background: #00000052;
+  padding: 1% 2%;
+  margin: 4%;
+  border-radius: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kunstStukSection img {
+  width: 100%;
+}
+
+.kunstStukSection .kunstStukSectionArticleHidden {
+  opacity: 0;
+}
+
+.kunstStukSection article {
+  opacity: 1;
+  transition: .5s;
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  background: #000000c9;
+  z-index: 100;
+  top: 0;
+}
+
+.kunstStukSection article h3 {
+  color: white;
+  margin: 4% 5%;
+}
+
+.kunstStukSection article i {
+  color: white;
+  margin: 2% 5%;
+}
+
+.kunstStukSection article p {
+  color: white;
+  margin: 1% 5%;
 }
 
 .ArtContentContainer {
@@ -181,10 +288,14 @@ footer button {
 
 /* Landscape mobile mobile */
 @media (orientation: landscape) {
-
   header {
     background: rgb(0, 0, 0);
-    background: linear-gradient( 180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 100% );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 38%,
+      rgba(0, 0, 0, 0) 100%
+    );
     width: 100%;
     height: 10vh;
     position: fixed;
@@ -192,12 +303,12 @@ footer button {
     z-index: 1000;
     margin: 0;
     display: none;
-}
+  }
 
   header nav {
     margin: 0;
     display: none;
-}
+  }
 
   header nav ul:first-of-type {
     display: flex;
@@ -222,6 +333,17 @@ footer button {
     padding-left: 3%;
   }
 
+  .loading div {
+    height: 100vh;
+    width: 53vw;
+    margin: 0 0.5vw;
+    background: linear-gradient(270deg, #b4b4b488, #dfdfdf88);
+    background-size: 400% 400%;
+    -webkit-animation: loadingAnimation 2s ease infinite;
+    -moz-animation: loadingAnimation 2s ease infinite;
+    animation: loadingAnimation 2s ease infinite;
+}
+
   .ArtContentContainer {
     display: flex;
     flex-direction: row;
@@ -231,15 +353,15 @@ footer button {
     overflow-y: scroll;
     padding: 0vh 0 0 0;
     margin: 0;
-}
+  }
 
-.kunstStukSection {
-  height: 100vh;
-  width: auto;
-  position: relative;
-  padding: 0 1vh;
-  transition: 2s;
-}
+  .kunstStukSection {
+    height: 100vh;
+    width: auto;
+    position: relative;
+    padding: 0 1vh;
+    transition: 2s;
+  }
 
   .kunstStukSection img {
     height: 100vh;
@@ -248,7 +370,12 @@ footer button {
 
   footer {
     background: rgb(0, 0, 0);
-    background: linear-gradient( 180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 1) 100% );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 89%,
+      rgba(0, 0, 0, 1) 100%
+    );
     width: 100%;
     height: 5vh;
     position: fixed;
@@ -256,7 +383,7 @@ footer button {
     z-index: 950;
     margin: 0;
     display: none;
-}
+  }
 
   footer button {
     display: block;
@@ -265,10 +392,14 @@ footer button {
 
 /* Desktop */
 @media only screen and (min-width: 1000px) {
-
   header {
     background: rgb(0, 0, 0);
-    background: linear-gradient( 180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 100% );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 38%,
+      rgba(0, 0, 0, 0) 100%
+    );
     width: 100%;
     height: 10vh;
     position: fixed;
@@ -276,12 +407,12 @@ footer button {
     z-index: 1000;
     margin: 0;
     display: block;
-}
+  }
 
   header nav {
     margin: 0;
-    display:block;
-}
+    display: block;
+  }
 
   header nav input {
     width: 25%;
@@ -329,6 +460,17 @@ footer button {
     padding: 5% 0 0% 5%;
   }
 
+  .loading div {
+    height: 69vh;
+    width: 36vw;
+    margin: 1vh 0vw;
+    background: linear-gradient(270deg, #b4b4b488, #dfdfdf88);
+    background-size: 400% 400%;
+    -webkit-animation: loadingAnimation 2s ease infinite;
+    -moz-animation: loadingAnimation 2s ease infinite;
+    animation: loadingAnimation 2s ease infinite;
+}
+
   .ArtContentContainer {
     display: flex;
     flex-direction: row;
@@ -353,22 +495,22 @@ footer button {
   .kunstStukSection img {
     height: auto;
     width: 100%;
-}
+  }
 
-footer {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 89%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  width: 100%;
-  height: 10vh;
-  position: fixed;
-  bottom: 0%;
-  z-index: 950;
-  margin: 0;
-  display: block;
-}
+  footer {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 89%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    bottom: 0%;
+    z-index: 950;
+    margin: 0;
+    display: block;
+  }
 }

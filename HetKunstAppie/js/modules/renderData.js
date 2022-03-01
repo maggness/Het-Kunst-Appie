@@ -4,11 +4,16 @@ export function renderData(data) {
     data.artObjects.forEach((kunst) => {
       itemsSection.insertAdjacentHTML(
         "afterbegin",
-        `<li class="kunstStukSection"><p>${kunst.title} <br> ${
-          kunst.principalOrFirstMaker
-        }</p> <img id="imgtest" src="${
-          kunst.webImage.url.slice(0, -3) + "=s1000"
-        }"></li>`
+        `<li class="kunstStukSection">
+          <h2>${kunst.title} <br> <i> ${kunst.principalOrFirstMaker} </i></h2> <img id="imgtest" src="${kunst.webImage.url.slice(0, -3) + "=s1000"}">
+          <article class="kunstStukSectionArticleHidden">
+            <h3>${kunst.longTitle}</h3>
+            <i>${kunst.principalOrFirstMaker}</i>
+            <p>${kunst.productionPlaces}</p>
+          </article>
+        </li>
+        `
       )
     })
   }
+  

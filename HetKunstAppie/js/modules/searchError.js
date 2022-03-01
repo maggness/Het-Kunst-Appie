@@ -8,9 +8,9 @@ export function searchError(data) {
         artistsForError[Math.floor(Math.random() * artistsForError.length)]
       itemsSection.insertAdjacentHTML(
         "afterbegin",
-        "We found nothing with " +
+        "We found nothing with '" +
           searchTerm +
-          ", try a name like " +
+          "', try a name like " +
           artistName +
           "."
       )
