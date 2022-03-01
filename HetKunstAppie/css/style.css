@@ -5,6 +5,7 @@ body {
   margin: 0;
 }
 
+/* Mobile styling */
 header {
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -32,8 +33,8 @@ footer {
   width: 100%;
   height: 10vh;
   position: fixed;
-  bottom: 0;
-  z-index: 1000;
+  bottom: 4%;
+  z-index: 950;
   margin: 0;
 }
 
@@ -42,12 +43,21 @@ header nav {
 }
 
 header nav input {
-  width: 100%;
+  width: 96%;
   border: none;
   height: 4vh;
   position: fixed;
-  bottom: 10%;
+  bottom: 0%;
+  left: 0;
   z-index: 1000;
+  background: black;
+  color: white;
+  padding: 2% 2%;
+  outline: none;
+}
+
+header nav input::placeholder {
+  color: white;
 }
 
 header nav ul:first-of-type {
@@ -82,11 +92,6 @@ header nav ul:first-of-type li img {
 
 header nav ul:first-of-type li:last-of-type img {
   width: 25%;
-}
-
-/* waarom komt deze niet bovenaan????? */
-header nav .uitklappen {
-  transform: rotate(-45deg) translateX(0%) !important;
 }
 
 header nav ul:last-of-type {
@@ -153,6 +158,11 @@ header nav ul li img {
   position: absolute;
   font-size: 0.8em;
   bottom: 0;
+  background: #00000052;
+  padding: 1% 2%;
+  margin: 4%;
+  border-radius: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .ArtContentContainer {
@@ -161,14 +171,34 @@ header nav ul li img {
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
-  padding: 10% 0 0% 0%;
+  margin: 0;
+  padding: 11% 0 20% 0%;
 }
 
 footer button {
   display: none;
 }
 
+/* Landscape mobile mobile */
 @media (orientation: landscape) {
+
+  header {
+    background: rgb(0, 0, 0);
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 100% );
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    display: none;
+}
+
+  header nav {
+    margin: 0;
+    display: none;
+}
+
   header nav ul:first-of-type {
     display: flex;
     width: 100%;
@@ -188,7 +218,7 @@ footer button {
   }
 
   header nav ul:first-of-type li img {
-    width: 50%;
+    width: 30%;
     padding-left: 3%;
   }
 
@@ -198,25 +228,147 @@ footer button {
     flex-wrap: nowrap;
     width: 100%;
     align-items: center;
-    overflow: hidden;
-    align-content: center;
-  }
+    overflow-y: scroll;
+    padding: 0vh 0 0 0;
+    margin: 0;
+}
 
-  .kunstStukSection {
-    height: 100vh;
-    width: 35vw;
-    position: relative;
-    padding: 0 65vh;
-    transition: 2s;
-    transform: translateX(0vh);
-  }
+.kunstStukSection {
+  height: 100vh;
+  width: auto;
+  position: relative;
+  padding: 0 1vh;
+  transition: 2s;
+}
 
   .kunstStukSection img {
-    height: auto;
-    width: 35vw;
+    height: 100vh;
+    width: auto;
   }
+
+  footer {
+    background: rgb(0, 0, 0);
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 1) 100% );
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    bottom: 0%;
+    z-index: 950;
+    margin: 0;
+    display: none;
+}
 
   footer button {
     display: block;
   }
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+
+  header {
+    background: rgb(0, 0, 0);
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0) 100% );
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    display: block;
+}
+
+  header nav {
+    margin: 0;
+    display:block;
+}
+
+  header nav input {
+    width: 25%;
+    height: 1vh;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    z-index: 1000;
+    background: black;
+    border: 1px solid white;
+    color: white;
+    padding: 1% 1%;
+    margin: 1% 1% 0% 0%;
+    outline: none;
+    border-radius: 30px;
+    left: auto;
+    bottom: auto;
+  }
+
+  header nav ul:first-of-type {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0% 0 0% 0%;
+    z-index: 100;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  header nav ul:first-of-type li {
+    width: 30%;
+    margin: 0% 0 0% 0;
+  }
+
+  header nav ul:first-of-type li:last-of-type {
+    display: block;
+  }
+
+  header nav ul:first-of-type li img {
+    width: 50%;
+    padding: 5% 0 0% 5%;
+  }
+
+  .ArtContentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    align-content: center;
+    padding: 5% 0% 5% 0;
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  .kunstStukSection {
+    height: auto;
+    width: 40%;
+    position: relative;
+    padding: 0 1vh;
+    transition: 2s;
+  }
+
+  .kunstStukSection img {
+    height: auto;
+    width: 100%;
+}
+
+footer {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 89%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom: 0%;
+  z-index: 950;
+  margin: 0;
+  display: block;
+}
 }

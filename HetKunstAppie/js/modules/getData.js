@@ -4,9 +4,6 @@ import {renderData} from './renderData.js'
 import {searchError} from './searchError.js'
 import {itemsSection, url} from './variables.js'
 
-// First render
-getAndRenderData(url)
-
 // Gets API Data
 export function getAndRenderData(url) {
   const data = fetch(url)
@@ -20,6 +17,6 @@ export function getAndRenderData(url) {
 // Shows HTML
 function renderHTML(data) {
   itemsSection.innerHTML = ""
-  renderData(data)
   searchError(data)
+  renderData(data)
 }
