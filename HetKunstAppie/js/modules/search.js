@@ -1,5 +1,5 @@
 import {getAndRenderData} from './getData.js'
-import {searchInputSearchBar} from './variables.js'
+import {searchInputSearchBar, resultLength} from './variables.js'
 
 //search
 function search() {
@@ -7,7 +7,7 @@ function search() {
     let url =
       "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" +
       searchTerm +
-      "&ps=6"
+      "&ps=" + resultLength
     console.log(url)
     getAndRenderData(url)
   }

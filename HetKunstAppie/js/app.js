@@ -4,3 +4,4 @@ import {url} from './modules/variables.js'
 
 // First render
 getAndRenderData(url)
+
