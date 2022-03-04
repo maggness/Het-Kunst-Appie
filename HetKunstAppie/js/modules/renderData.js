@@ -1,6 +1,6 @@
 import {itemsSection} from './variables.js'
 
-export function renderData(data) {
+export const renderData = (data) => {
     data.artObjects.forEach((kunst) => {
       itemsSection.insertAdjacentHTML(
         "afterbegin",

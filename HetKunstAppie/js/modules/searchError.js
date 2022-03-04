@@ -1,7 +1,7 @@
 import './search.js'
 import {searchInputSearchBar, itemsSection, artistsForError} from './variables.js'
 
-export function searchError(data) {
+export const searchError = (data) => {
     let searchTerm = searchInputSearchBar.value
     if (data.artObjects.length === 0) {
       const artistName =

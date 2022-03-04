@@ -4,7 +4,7 @@ import {searchError} from './searchError.js'
 import {itemsSection} from './variables.js'
 
 // Gets API Data
-export function getAndRenderData(url) {
+export const getAndRenderData = (url) => {
   const data = fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -15,7 +15,7 @@ export function getAndRenderData(url) {
 }
 
 // Shows HTML
-function renderHTML(data) {
+const renderHTML = (data) => {
   itemsSection.innerHTML = ""
   searchError(data)
   renderData(data)
