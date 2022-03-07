@@ -1,7 +1,12 @@
-import {getAndRenderData} from './modules/getData.js'
+import {getAndRenderData} from './modules/getAndRenderData.js'
 import './modules/search.js'
-import {url} from './modules/variables.js'
+import './routes/routie.js'
 
-// First render
-getAndRenderData(url)
-
+routie({
+    '': () => {
+        getAndRenderData()
+    },
+    'art/:id': (id) => {
+        getAndRenderData(id)
+    }
+});

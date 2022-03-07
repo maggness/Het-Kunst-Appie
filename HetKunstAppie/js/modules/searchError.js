@@ -1,4 +1,5 @@
 import './search.js'
+import './getAndRenderData.js'
 import {searchInputSearchBar, itemsSection, artistsForError} from './variables.js'
 
 export const searchError = (data) => {

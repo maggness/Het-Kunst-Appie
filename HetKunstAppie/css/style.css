@@ -165,6 +165,10 @@ header nav ul li img {
   width: 30%;
 }
 
+a {
+  color: white;
+}
+
 .loading {
   list-style-type: none;
   position: relative;
