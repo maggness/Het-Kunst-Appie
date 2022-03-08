@@ -94,11 +94,35 @@ header nav ul:first-of-type li:last-of-type {
 
 header nav ul:first-of-type li img {
   width: 50%;
-  padding: 0 0 0 5%;
+  padding: 4% 0 0% 5%;
 }
 
 header nav ul:first-of-type li:last-of-type img {
   width: 25%;
+}
+
+header nav ul:first-of-type li > img:last-of-type {
+  width: 8vw;
+  padding: 0px 0 0 0%;
+  position: fixed;
+  right: 4vw;
+  top: 4vw;
+}
+
+header nav ul:first-of-type li > section p {
+  width: 70vw;
+  position: fixed;
+  right: 9vw;
+  top: 12vw;
+  background: black;
+  padding: 6%;
+  transform: scale(0);
+  transition: .7s;
+  transform-origin: top right;
+}
+
+header nav ul:first-of-type li > section .visible {
+  transform: scale(1);
 }
 
 header nav ul:last-of-type {
@@ -307,8 +331,18 @@ a {
   background: black;
   margin: 0;
   padding: 5%;
-  font-size: 1em;
+  font-size: .9em;
   width: 90%;
+}
+
+.kunstStukSectionDetails h2 i {
+  font-weight: 400;
+}
+
+.kunstStukSectionDetails h2 span {
+  font-weight: 400;
+  display: block;
+  color: gray;
 }
 
 .kunstStukSectionDetails img {
@@ -496,6 +530,7 @@ footer button {
   /* width */
   ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
   }
 
   /* Track */

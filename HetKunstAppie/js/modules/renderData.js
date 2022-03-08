@@ -30,7 +30,8 @@ export const renderDatanoId = (data) => {
 const item = (data, id) => {
   const filter = data.artObjects.filter((item) => item.id === id);
 
-  const title = filter.map((item) => item.title);
+  const title = filter.map((item) => item.longTitle);
+  const maker = filter.map((item) => item.principalOrFirstMaker);
   const image = filter.map((item) => item.webImage.url);
 
   console.log(filter);
@@ -43,7 +44,7 @@ const item = (data, id) => {
     "afterbegin",
     `<li class="kunstStukSectionDetails" id="artDetail">
           <img src="${image}">
-          <h2>${title}</h2>
+          <h2>${title} <br> <i>- ${maker}</i> <span>Tap artwork to zoom in</span></h2>
       </li>`
   );
 
