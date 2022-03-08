@@ -5,6 +5,8 @@ Voor mijn minor web maak ik met de API van het Rijksmuseam een applicatie waar j
 
 Het Kunst Appie is te zien via deze link: (https://maggness.github.io/Het-Kunst-Appie/HetKunstAppie/)
 
+![Front-end frontpage image](https://user-images.githubusercontent.com/30145681/157264964-a8900826-9802-4eb3-a5a7-f0be3a5e7089.png)
+
 ### User story
 
 As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown [Rijksmuseum - RijksData API](https://github.com/cmda-minor-web/web-app-from-scratch-2122/blob/main/course/rijksmuseum.md)
@@ -32,5 +34,8 @@ Ook moet je de API key veranderen naar je eigen key. die staat in de URL na `key
 
 ## Resources
 
+Rijks Data API: https://data.rijksmuseum.nl/object-metadata/api/
+
 Lessen & leraren
+
 W3 Schools
