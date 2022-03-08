@@ -3,8 +3,6 @@ export const itemsSection = document.querySelector("#items");
 export const rotateInfoBotton = document.querySelector("#rotateInfo");
 export const rotateInfoText = document.querySelector("#rotateInfoText");
 export let resultLength = 8;
-
-// searchError
 export const artistsForError = [
   "Rembrandt",
   "Vermeer",

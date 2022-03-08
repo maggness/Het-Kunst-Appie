@@ -1,0 +1,167 @@
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+    header {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 38%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      width: 100%;
+      height: 10vh;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      margin: 0;
+      display: block;
+    }
+  
+    /* width */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: black;
+    }
+  
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: white;
+      border-radius: 5px;
+    }
+  
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(211, 211, 211);
+    }
+  
+    header nav {
+      margin: 0;
+      display: block;
+    }
+  
+    header nav input {
+      width: 25%;
+      height: 1vh;
+      position: fixed;
+      top: 0%;
+      right: 0;
+      z-index: 1000;
+      background: black;
+      border: 1px solid white;
+      color: white;
+      padding: 1% 1%;
+      margin: 1% 1% 0% 0%;
+      outline: none;
+      border-radius: 30px;
+      left: auto;
+      bottom: auto;
+    }
+  
+    header nav ul:first-of-type {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      list-style: none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0% 0 0% 0%;
+      z-index: 100;
+      position: relative;
+      flex-wrap: nowrap;
+    }
+  
+    header nav ul:first-of-type li {
+      width: 30%;
+      margin: 0% 0 0% 0;
+    }
+  
+    header nav ul:first-of-type li:last-of-type {
+      display: block;
+    }
+  
+    header nav ul:first-of-type li img {
+      width: 50%;
+      padding: 5% 0 0% 5%;
+    }
+  
+    header nav ul:first-of-type > li:nth-of-type(2) {
+      display: none;
+  }
+  
+    .loading div {
+      height: 69vh;
+      width: 36vw;
+      margin: 1vh 0vw;
+      background: linear-gradient(270deg, #b4b4b488, #dfdfdf88);
+      background-size: 400% 400%;
+      -webkit-animation: loadingAnimation 2s ease infinite;
+      -moz-animation: loadingAnimation 2s ease infinite;
+      animation: loadingAnimation 2s ease infinite;
+    }
+  
+    .ArtContentContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      overflow: hidden;
+      align-content: center;
+      padding: 5% 0% 5% 0;
+      margin: 0;
+      justify-content: space-evenly;
+    }
+  
+    .artSectionDetails img {
+      width: auto;
+      height: 80vh;
+    }
+  
+    .artSectionDetails h2 {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
+      background: black;
+      margin: 0;
+      padding: 1.5%;
+      font-size: 1em;
+      width: 97%;
+    }
+  
+    .artSection {
+      height: auto;
+      width: 40%;
+      position: relative;
+      padding: 0 1vh;
+      transition: 2s;
+    }
+  
+    .artSection img {
+      height: auto;
+      width: 100%;
+    }
+  
+    footer {
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 89%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      width: 100%;
+      height: 10vh;
+      position: fixed;
+      bottom: 0%;
+      z-index: 950;
+      margin: 0;
+      display: block;
+    }
+  }

@@ -1,5 +1,6 @@
 import { getAndRenderData } from "./getAndRenderData.js";
-import { searchInputSearchBar, resultLength, itemsSection } from "./variables.js";
+import { searchInputSearchBar, resultLength } from "./variables.js";
+import { searchEasterEggs } from "./easterEggs.js";
 
 //search
 const search = () => {
@@ -9,12 +10,7 @@ const search = () => {
     searchTerm +
     "&ps=" +
     resultLength;
-  console.log(url);
-
-  if (searchTerm === "maketheitemstiny" || searchTerm === "make the items tiny" || searchTerm === "Make the items tiny") {
-    itemsSection.style.transition = "1s"
-    itemsSection.style.transform = "scale(.3)"
-  }
+  searchEasterEggs();
 };
 
 searchInputSearchBar.addEventListener("keyup", function (e) {
