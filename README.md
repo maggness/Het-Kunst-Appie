@@ -37,6 +37,7 @@ De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-
 - Hinting search om het zoeken nog makkelijker & beter te maken.
 - Uitzoeken waarom het zoeken werkt tot 3 karakters, daarna gaat het raar doen
 - Zoom functie verbeteren
+- Improved UI
 
 ## Licence
 
