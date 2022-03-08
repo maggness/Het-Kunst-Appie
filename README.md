@@ -25,12 +25,20 @@ Om dit project local te laten draaien kun je dit project clone met: `gh repo clo
 
 Ook moet je de API key veranderen naar je eigen key. die staat in de URL na `key=`
 
+## API 
+
+De Rijks Data API is vrij te gebruiken en op https://data.rijksmuseum.nl/object-metadata/api/ te vinden. Meer informatie over deze API is te vinden op: https://data.rijksmuseum.nl/
+
 ## Future features
 
 - Loadmore button om meer dan 8 items te laten zien.
 - Hinting search om het zoeken nog makkelijker & beter te maken.
 - Uitzoeken waarom het zoeken werkt tot 3 karakters, daarna gaat het raar doen
 - Zoom functie verbeteren
+
+## Licence
+
+Dit project is voorzien van een MIT licence. Zie de pagina LICENCE voor meer informatie.
 
 ## Resources
 
