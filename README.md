@@ -1,6 +1,8 @@
 # Het Kunst Appie - Tim de Roller
 Web App From Scratch @cmda-minor-web 2021 - 2022
 
+Mijn [Visite kaartje](https://maggness.github.io/Het-Kunst-Appie/visitekaartje/) van de intro opdracht.
+
 Voor mijn minor web maak ik met de API van het Rijksmuseam een applicatie waar je kan zoeken naar verschillende objecten uit deze API.
 
 Het Kunst Appie is te zien via deze link: (https://maggness.github.io/Het-Kunst-Appie/HetKunstAppie/)
