@@ -1,12 +1,12 @@
-import {getAndRenderData} from './modules/getAndRenderData.js'
-import './modules/search.js'
-import './routes/routie.js'
+import { getAndRenderData } from "./modules/getAndRenderData.js";
+import "./modules/search.js";
+import "./routes/routie.js";
 
 routie({
-    '': () => {
-        getAndRenderData()
-    },
-    'art/:id': (id) => {
-        getAndRenderData(id)
-    }
+  "": () => {
+    getAndRenderData();
+  },
+  "art/:id": (id) => {
+    getAndRenderData(id);
+  },
 });
